@@ -1,4 +1,4 @@
-baseURL = 'https://v01p3.com/'
+baseURL = '(website url)'
 languageCode = 'en-us'
 title = 'New Website'
 theme = 'blog_simple'
