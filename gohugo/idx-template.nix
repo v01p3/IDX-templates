@@ -11,6 +11,8 @@
     # project folder for the new workspace. ${./.} inserts the directory
     # of the checked-out Git folder containing this template.
     hugo new site "$out"
+    cp -r ${./papermod} "$out"/themes/papermod
+    echo "theme = 'ananke'" >> hugo.toml
     mkdir -p "$out"/.idx
     cp ${./dev.nix} "$out"/.idx/dev.nix
 
