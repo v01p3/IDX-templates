@@ -1,6 +1,5 @@
 name = 'blog_simple'
 license = 'MIT'
-licenselink = 'https://github.com/owner/repo/LICENSE'
 description = 'Simple theme for blogging sites'
 
 tags = ['blog', 'simple', 'starter']
