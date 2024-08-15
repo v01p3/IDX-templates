@@ -12,7 +12,7 @@
     # of the checked-out Git folder containing this template.
     hugo new site "$out"
     cp -r ${./papermod} "$out"/themes/papermod
-    echo "theme = 'papermod'" >> ${./hugo.toml}
+    echo "theme = 'papermod'" >> "$out"/hugo.toml
     mkdir -p "$out"/.idx
     cp ${./dev.nix} "$out"/.idx/dev.nix
 
