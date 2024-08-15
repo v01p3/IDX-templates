@@ -4,6 +4,8 @@
     pkgs.go
     pkgs.hugo
     pkgs.git
+    pkgs.nodejs_20
+    pkgs.tailwindcss
   ];
   idx = {
     previews = {
