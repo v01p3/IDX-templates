@@ -2,8 +2,6 @@
   packages = [
   pkgs.go
   pkgs.hugo
-  pkgs.nodejs_20
-  pkgs.nodePackages.pnpm
   ];
   bootstrap = ''
     mkdir "$out"
