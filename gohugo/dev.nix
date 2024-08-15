@@ -8,6 +8,9 @@
     pkgs.tailwindcss
   ];
   idx = {
+    workspace.onCreate = {
+      tailwindcss-init = "tailwindcss init";
+    };
     previews = {
       enable = true;
       previews = {
