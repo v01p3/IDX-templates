@@ -6,15 +6,16 @@
   pkgs.tailwindcss
   ];
   bootstrap = ''
-    mkdir "$out"
-    chmod -R +w "$out"
-    hugo new site "$out"
-    cp -r ${./blog_simple} "$out"/themes/blog_simple
-    cp -r ${./hugo.toml} "$out"/hugo.toml
-    cp -r ${./content} "$out"/content
-    mkdir -p "$out"/.idx
-    cp ${./dev.nix} "$out"/.idx/dev.nix
-    cp ${./icon.png} "$out"/.idx/icon.png
-    cd "$out"/themes/blog_simple; tailwindcss init
+    hugo new site "$WS_NAME"
+    cp -r ${./blog_simple} "$WS_NAME/themes/blog_simple"
+    cp -r ${./hugo.toml} "$WS_NAME/hugo.toml"
+    cp -r ${./content} "$WS_NAME/content"
+   
+    mkdir "$WS_NAME/.idx"
+    cp -rf ${./dev.nix} "$WS_NAME/.idx/dev.nix"
+    cp -rf ${./icon.png} "$WS_NAME/.idx/icon.png"
+    chmod -R +w "$WS_NAME"
+    cd "$WS_NAME"; tailwindcss init
+    mv "$WS_NAME" "$out"
   '';
 }
