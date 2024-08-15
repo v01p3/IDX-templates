@@ -17,6 +17,7 @@
     cp ${./dev.nix} "$out"/.idx/dev.nix
 
     # Set some permissions
+    chmod -R +w "$out"
 
     # Remove the template files themselves and any connection to the template's
     # Git repositor
