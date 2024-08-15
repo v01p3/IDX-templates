@@ -9,7 +9,6 @@
     # Copy the folder containing the `idx-template` files to the final
     # project folder for the new workspace. ${./.} inserts the directory
     # of the checked-out Git folder containing this template.
-    mkdir "$out"
     cp -rf ${./.} "$out"
     hugo new site "$out"
 
