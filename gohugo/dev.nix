@@ -8,6 +8,12 @@
     pkgs.nodePackages.pnpm
   ];
   idx = {
+    workspace = {
+      onCreate = {
+        npm install -D tailwindcss
+        npx tailwindcss init
+      };
+    };
     previews = {
       enable = true;
       previews = {
