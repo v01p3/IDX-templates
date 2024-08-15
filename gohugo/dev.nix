@@ -8,9 +8,9 @@
   ];
   idx = {
     workspace.onCreate = {
-      npm-init = "cd themes/blog_simple && npm init -y"
-      install-tailwind = "cd themes/blog_simple && npm install -D tailwindcss"
-      tailwind-init = "cd themes/blog_simple && npx tailwindcss init"
+      npm-init = "npm init -y"
+      npm-install-tailwindcss = "npm install -D tailwindcss"
+      npx-tailwind-init = "npx tailwindcss init"
     };
     previews = {
       enable = true;
