@@ -13,6 +13,6 @@
     cp -rf ${./dev.nix} "$out"/.idx/dev.nix
     cp -rf ${./icon.png} "$out"/.idx/icon.png
 
-    chmod -R +w "$WS_NAME"
+    chmod -R +w "$out"
   '';
 }
