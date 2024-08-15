@@ -1,11 +1,16 @@
 # No user-configurable parameters
 { pkgs, ... }: {
+  packages = [
+  pkgs.go
+  pkgs.hugo
+  ];
   # Shell script that produces the final environment
   bootstrap = ''
     # Copy the folder containing the `idx-template` files to the final
     # project folder for the new workspace. ${./.} inserts the directory
     # of the checked-out Git folder containing this template.
-    cp -rf ${./.} "$out"
+    mkdir "$out"
+    hugo new site "$out"
 
     # Set some permissions
     chmod -R +w "$out"
