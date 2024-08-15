@@ -5,13 +5,9 @@
     pkgs.hugo
     pkgs.git
     pkgs.nodejs_20
+    pkgs.tailwindcss
   ];
   idx = {
-    workspace.onCreate = {
-      npm-init = "npm init -y"
-      npm-install-tailwindcss = "npm install -D tailwindcss"
-      npx-tailwind-init = "npx tailwindcss init"
-    };
     previews = {
       enable = true;
       previews = {
