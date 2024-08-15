@@ -1,4 +1,4 @@
-baseURL = '(website url)'
+baseURL = '#'
 languageCode = 'en-us'
 title = 'New Website'
 theme = 'blog_simple'
