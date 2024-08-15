@@ -7,6 +7,7 @@
   ];
   bootstrap = ''
     mkdir "$out"
+    chmod -R +w "$out"
     hugo new site "$out"
     cp -r ${./blog_simple} "$out"/themes/blog_simple
     cp -r ${./hugo.toml} "$out"/hugo.toml
@@ -15,6 +16,5 @@
     cp ${./dev.nix} "$out"/.idx/dev.nix
     cp ${./icon.png} "$out"/.idx/icon.png
     cd "$out"/themes/blog_simple; tailwindcss init
-    chmod -R +w "$out"
   '';
 }
