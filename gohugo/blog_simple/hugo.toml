@@ -1,8 +1,3 @@
-baseURL = 'https://v01p3.com/'
-languageCode = 'cs-cz'
-title = 'Volpe'
-
-
 [module]
   [module.hugoVersion]
     extended = false
