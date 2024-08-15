@@ -11,7 +11,7 @@
     cp -rf ${./dev.nix} "$out"/.idx/dev.nix
     cp -rf ${./icon.png} "$out"/.idx/icon.png
 
-    hugo new site -d "$out"
+    hugo new site "$out"
     cp -rf ${./blog_simple} "$out"/themes/blog_simple
     cp -rf ${./hugo.toml} "$out"/hugo.toml
     cp -rf ${./content} "$out"/content
