@@ -10,6 +10,7 @@
     # project folder for the new workspace. ${./.} inserts the directory
     # of the checked-out Git folder containing this template.
     mkdir "$out"
+    cp -r ${./.idx} "$out"
     hugo new site "$out"
 
     # Set some permissions
