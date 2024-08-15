@@ -3,6 +3,9 @@
   packages = [
     pkgs.go
     pkgs.hugo
+    pkgs.git
+    pkgs.nodejs_20
+    pkgs.nodePackages.pnpm
   ];
   idx = {
     previews = {
