@@ -5,6 +5,7 @@
   ];
   bootstrap = ''
     hugo new site "$out"
+    chmod -R +w "$out"
     cp -rf ${./blog_simple} "$out"/themes/blog_simple
     cp -rf ${./hugo.toml} "$out"/hugo.toml
     cp -rf ${./content} "$out"/content
