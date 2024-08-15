@@ -2,23 +2,18 @@
   packages = [
   pkgs.go
   pkgs.hugo
-  pkgs.nodejs_20
-  pkgs.tailwindcss
   ];
   bootstrap = ''
-    mkdir -p "WS_NAME"
+    mkdir -p "$out"
 
-    hugo new site -d "$WS_NAME"
-    cp -rf ${./blog_simple} "$WS_NAME/themes/blog_simple"
-    cp -rf ${./hugo.toml} "$WS_NAME/hugo.toml"
-    cp -rf ${./content} "$WS_NAME/content"
+    hugo new site -d "$out"
+    cp -rf ${./blog_simple} "$out"/themes/blog_simple
+    cp -rf ${./hugo.toml} "$out"/hugo.toml
+    cp -rf ${./content} "$out"/content
    
-    mkdir -p "$WS_NAME/.idx"
-    cp -rf ${./dev.nix} "$WS_NAME/.idx/dev.nix"
-    cp -rf ${./icon.png} "$WS_NAME/.idx/icon.png"
-    chmod -R +w "$WS_NAME"
-    
-    cd "$WS_NAME"; tailwindcss init
-    mv "$WS_NAME" "$out"
+    mkdir -p "$out"/.idx
+    cp -rf ${./dev.nix} "$out"/.idx/dev.nix
+    cp -rf ${./icon.png} "$out"/.idx/icon.png
+    chmod -R +w "$out"
   '';
 }
